@@ -15,7 +15,7 @@ Primero crearemos un directorio con el nombre que queramos, en este caso se llam
 
 > docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material new .
 
-Este comando creará el archivo de configuración mkdocs.yml y el archivo Markdown index.md dentro del directorio docs, dentro de este directorio es donde publicaremos nuestros posts en markdown.
+Este comando creará el archivo de configuración mkdocs.yml y el archivo markdown index.md dentro del directorio docs, dentro de este directorio es donde publicaremos nuestros posts en markdown.
 
 ## Archivo de configuracion
 
@@ -31,3 +31,14 @@ nav:
 
 theme: material
 ```
+Done `site_name` es el nombre de nuestra pagina, `theme` es el theme que usara nuestra pagina, y `nav` crea una pequeña sidebar en la pagina con titulos que enlaza a los archivos en markdown que tenemos el directorio `docs`.
+
+## Lanzamiento del sitio
+Para poner en marcha el sitio vamos a usar el comando `serve` desde el directorio `proyectos`, el cual nos permitira conectar a nuestra pagina de html con "nuestra ip":8000 
+
+> docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material
+
+El sitio deberia de verse asi:
+
+![alt text](https://github.com/antoniomanu/antoniomanu.github.io/blob/main/capturas/mkdocs.png?raw=true)
+
