@@ -28,4 +28,5 @@ nav:
     - Principal: index.md
     - Acerca de: about.md
 
-theme: material```
+theme: material
+```
