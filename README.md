@@ -42,3 +42,14 @@ El sitio deberia de verse asi:
 
 ![alt text](https://github.com/antoniomanu/antoniomanu.github.io/blob/main/capturas/mkdocs.png?raw=true)
 
+## Github Pages
+Despues de comprobar que funciona vamos a lanzarlo en nuestro repositorio de github de la siguiente forma:
+
+1. Hacer que nuestro directorio proyecto sea un repositorio local.
+> git init
+2. Enlazar nuestro repositorio local con el repositorio que corresponde a MkDocs en Github.
+> git remote add origin url_del_directorio
+3. Lanzar el contenedor que nos subirá los archivos a Github. El cual nos pedirá los credenciales de usuario.
+> docker run --rm -it -v ~/.ssh:/root/.ssh -v "$PWD":/docs squidfunk/mkdocs-material gh-deploy
+
+Despues de esto deberiamos tener un branch nuevo en el repositorio que hemos creado donde se encuentren los archivos de MkDocs.
