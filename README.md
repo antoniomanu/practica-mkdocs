@@ -11,4 +11,21 @@ Una vez dentro de la consola instalaremos docker y docker-compose, para asi pode
 > docker pull squidfunk/mkdocs-material
 
 ## Creacion del Proyecto
-Primero crearemos un repositorio con el nombre que queramos, en este caso se llamara `proyecto`
+Primero crearemos un directorio con el nombre que queramos, en este caso se llamara `proyecto`; y nos movemos a este, desde ese directorio usaremos el comando `new` para crear los archivos del directorio
+
+> docker run --rm -it -p 8000:8000 -v "$PWD":/docs squidfunk/mkdocs-material new .
+
+Este comando creará el archivo de configuración mkdocs.yml y el archivo Markdown index.md dentro del directorio docs, dentro de este directorio es donde publicaremos nuestros posts en markdown.
+
+## Archivo de configuracion
+
+Dentro del directorio del proyecto esta el archivo `mkdocs.yml` en donde indicamos brevemente la configuracion de la pagina y donde asignamos nuestros posts.
+Debemos de configurarlo de la siguiente forma:
+
+> site_name: IAW
+>
+> nav:
+>    - Principal: index.md
+>    - Acerca de: about.md
+>
+> theme: material
