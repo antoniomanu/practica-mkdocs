@@ -22,10 +22,10 @@ Este comando creará el archivo de configuración mkdocs.yml y el archivo Markdo
 Dentro del directorio del proyecto esta el archivo `mkdocs.yml` en donde indicamos brevemente la configuracion de la pagina y donde asignamos nuestros posts.
 Debemos de configurarlo de la siguiente forma:
 
-> site_name: IAW
->
-> nav:
->    - Principal: index.md
->    - Acerca de: about.md
->
-> theme: material
+```site_name: IAW
+
+nav:
+    - Principal: index.md
+    - Acerca de: about.md
+
+theme: material```
